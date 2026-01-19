@@ -5,7 +5,7 @@ from app.core.exceptions import AppException
 from fastapi.responses import JSONResponse
 from fastapi import Request
 
-from app.routers import products, warehouses, inventory, reports, auth
+from app.routers import products, warehouses, inventory, reports, auth, alerts
 
 app = FastAPI(title="Inventory Management System")
 
@@ -25,3 +25,4 @@ app.include_router(warehouses.router)
 app.include_router(inventory.router)
 app.include_router(reports.router)
 app.include_router(auth.router)
+app.include_router(alerts.router)
